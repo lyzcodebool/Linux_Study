@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
     atexit(term_fun2);
     atexit(term_fun3);
     FILE *fp = fopen(argv[1], "w");
-    fprintf(fp, "hello iotek");//标准c库函数 全缓存
+    fprintf(fp, "hello iotek");
+    //标准c库函数 全缓存
 
     if(!strcmp(argv[2], "exit"))
     {

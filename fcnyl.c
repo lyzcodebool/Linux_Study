@@ -35,28 +35,6 @@ void copy(int fd_in, int fd_out)
         }
     }
 }
-
-/*void copy(int fd_in, int fd_out)
-{
-    char buffer[BUF_LEN];
-    int size;
-    while((size = read(fd_in, buffer, BUF_LEN)) != 0)
-    {
-        printf("size = %d\n", size);
-        if(write(fd_out, buffer, size)!= size) 
-        {
-            perror("write error");
-            exit(1);
-        }
-    }
-        if(size < 0)
-        {
-            fprintf(stderr, "read error");
-            exit(1);
-        }
-    close(fd_in);
-    close(fd_out);
-}*/
 void set_fl(int fd, int flag)
 {
     //获得原来的文件状态标志
@@ -106,3 +84,24 @@ int main(int argc, char *argv[])
     close(fd_in);
 }
 
+/*void copy(int fd_in, int fd_out)
+{
+    char buffer[BUF_LEN];
+    int size;
+    while((size = read(fd_in, buffer, BUF_LEN)) != 0)
+    {
+        printf("size = %d\n", size);
+        if(write(fd_out, buffer, size)!= size) 
+        {
+            perror("write error");
+            exit(1);
+        }
+    }
+        if(size < 0)
+        {
+            fprintf(stderr, "read error");
+            exit(1);
+        }
+    close(fd_in);
+    close(fd_out);
+}*/
